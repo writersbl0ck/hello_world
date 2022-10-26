@@ -9,6 +9,7 @@ void handleOption(string);
 
 
 int main() {
+  cout << fixed << setprecision(4);
   string option = "";
   string color = "\x1b[" + to_string(32) + ";1m"; // changes color user input value to green
   string reset = "\x1b[0m";                       // resets console color to white
@@ -38,6 +39,9 @@ void showMenu(){
 }
 
 void handleOption(string userOption){
+  double distance = 0.0;
+  double time = 0.0;
+  
   if(userOption == "V" || userOption == "v"){
     cout << "Velocity" << endl;
   }
