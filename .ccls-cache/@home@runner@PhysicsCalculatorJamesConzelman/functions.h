@@ -18,6 +18,7 @@ double calcWeight(double, double);
 double calcMomentum(double, double); 
 
 // global variables
+string color = "\x1b[" + to_string(32) + ";1m";
 string resultColor = "\x1b[" + to_string(36) + ";1m";
 string reset = "\x1b[0m";
 
@@ -84,7 +85,9 @@ void handleOption(string userOption){
   else if(userOption == "M" || userOption == "m"){
     cout << "You have chosen to calculate Motion." << endl;
     motionMenu();
+    cout << color;
     cin >> motionOption;
+    cout << reset;
     motionFormulas(motionOption);
   }
   else if(userOption == "N" || userOption == "n"){
@@ -212,7 +215,7 @@ void calcMs(){
   s = s0 + (v0 * t) + ((1/2) * a * (t * t));
   cout << "You input " << s0 << ", " << v0 << ", " << t << ", and " << a << "." << endl;
   cout << s0 << " + " << "(" << v0 << " * " << t << ")" << " + " << "((1/2) " << " * " 
-    << a << " * " << t << "^2" << " = " << resultColor << s << reset << endl;
+    << a << " * " << t << "^2)" << " = " << resultColor << s << reset << endl;
 }
 
 void calcMv2(){
