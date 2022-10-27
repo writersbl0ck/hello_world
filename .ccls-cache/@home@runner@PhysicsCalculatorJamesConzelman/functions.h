@@ -212,9 +212,9 @@ void calcMs(){
   t = validateDouble(t);
   cout << "\nPlease enter a value for a: ";
   a = validateDouble(a);
-  s = s0 + (v0 * t) + ((1/2) * a * (t * t));
+  s = s0 + (v0 * t) + ((1.0/2.0) * a * (t * t));
   cout << "You input " << s0 << ", " << v0 << ", " << t << ", and " << a << "." << endl;
-  cout << s0 << " + " << "(" << v0 << " * " << t << ")" << " + " << "((1/2) " << " * " 
+  cout << s0 << " + " << "(" << v0 << " * " << t << ")" << " + " << "((1/2) * " 
     << a << " * " << t << "^2)" << " = " << resultColor << s << reset << endl;
 }
 
@@ -236,7 +236,7 @@ void calcMv2(){
   s = validateDouble(s);
   cout << "\nPlease enter a value for a: ";
   a = validateDouble(a);
-  v2 = (v0 * v0) + (2 *a) * (s - s0);
+  v2 = (v0 * v0) + (2 * a) * (s - s0);
   cout << "You input " << s0 << ", " << v0 << ", " << s << ", and " << a << "." << endl;
   cout << v0 << "^2 + " << "(2 * " << a << ")(" << s << " - " << s0 << ")" << " = " << resultColor << v2 << reset << endl;
 }
@@ -252,9 +252,9 @@ void calcMv(){
   v = validateDouble(v);
   cout << "\nPlease enter a value for v0: ";
   v0 = validateDouble(v0);
-  v_bar = (1/2) * (v + v0);
+  v_bar = (1.0/2.0) * (v + v0);
   cout << "You input " << v << " and " << v0 << "." << endl;
-  cout << "(1/2)(" << v << " + " << v0 << " = " << resultColor << v_bar << reset << endl;
+  cout << "(1/2)(" << v << " + " << v0 << ") = " << resultColor << v_bar << reset << endl;
 }
 
 double calcNewt2ndLaw(double m, double a){
