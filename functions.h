@@ -200,7 +200,7 @@ void calcMs(){
   double a = 0.0;
 
   cout << "You have chosen MS = solve for s." << endl;
-  cout << "The formula for Ms is s = s0 + v0t + (1/2)at^2." endl;
+  cout << "The formula for Ms is s = s0 + v0t + (1/2)at^2." << endl;
   cout << "Please enter a value for s0: ";
   s0 = validateDouble(s0);
   cout << "\nPlease enter a value for v0: ";
